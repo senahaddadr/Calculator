@@ -1,21 +1,54 @@
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('/digital.ttf');
+}
+
 body {
+    background-color: rgba(128, 128, 128, 0.277);
+}
+
+
+.calculator {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
     vertical-align: middle;
-    width: 320px;
+    width: 280px;
     margin: auto;
     gap: 0px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border: 3px solid rgba(33, 25, 37, 0.894);
+    border-radius: 12px;
+    background-color: rgb(145, 145, 138);
+    padding: 32px 8px;
+    box-shadow: inset rgba(0,0,0,0.85) 0px 3px 8px;
 }
 
 button {
+    background-color: rgb(231, 237, 188);
+    border-radius: 8px;
+    cursor: pointer;
     margin: 0px;
     vertical-align: middle;
     height: 48px;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 1px;
+    border: 2px solid rgba(44, 32, 32, 0.85);
+    -moz-border-radius: 14px;
+    -webkit-border-radius: 14px;
+    box-shadow: inset rgba(0,0,0,0.85) 0px 5px 5px;
+    -webkit-box-shadow: inset rgba(0,0,0,0.85) 0px 1px 5px;
+	-moz-box-shadow: inset rgba(0,0,0,0.85) 0px 1px 5px;
+}
+
+button:hover {
+    background-color:rgb(180, 183, 140) ;
+    transform:scale(1.02,1.02);
 }
 
 .backspace {
@@ -32,8 +65,29 @@ button {
 }
 
 .display {
-    background-color: rgb(224, 224, 224);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 3px solid rgb(82, 82, 80);
+    background-color: rgb(29, 29, 29);
     grid-column-start: 1;
     grid-column-end: 5;
     height: 64px;
+    margin-bottom: 32px;
+    align-items: flex-end;
+    justify-content: space-between;
+    justify-items: center;
+    font-size: 32px;
+    padding: 12px 8px;
+    font-family: 'digital-clock-font';
+    font-weight: bolder;
+
+}
+
+.display .temp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
 }
