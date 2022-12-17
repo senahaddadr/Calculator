@@ -5,33 +5,37 @@
     <title>Calculator</title>
     <script src="./script.js" defer></script>
     <link rel="stylesheet" href="style.css">
-</head>
+    <link href="https://fonts.cdnfonts.com/css/scientific-calculator-lcd" rel="stylesheet"></head>
 <body>
-    <div class="display">0</div>
-    <button class="delete">AC</button>
-    <button class="backspace"><img src='/backspace.png' width=60px height= 32px alt='backspace'></button>
-    <button class="digit">7</button>
-    <button class="digit">8</button>
-    <button class="digit">9</button>
-    <button class="operate">÷</button>
-    <button class="digit">4</button>
-    <button class="digit">5</button>
-    <button class="digit">6</button>
-    <button class="operate">×</button>
-    <button class="digit">1</button>
-    <button class="digit">2</button>
-    <button class="digit">3</button>
-    <button class="operate">-</button>
-    <button class="digit">.</button>
-    <button class="digit">0</button>
-    <button class="operate">=</button>
-    <button class="operate">+</button>
-
-
-
-
-
-
-
+    <div class="calculator">
+        <div class="display">
+            <div class="temp"></div>
+            <div class="main">0</div>
+        </div>
+        <button class="delete" id="ac">AC</button>
+        <button class="backspace" id="back"><img src='/backspace.png' width=32px height= 24px alt='backspace'></button>
+        <button class="digit" id="7">7</button>
+        <button class="digit" id="8">8</button>
+        <button class="digit" id="9">9</button>
+        <button class="divide operate" id="/">÷</button>
+        <button class="digit" id="4">4</button>
+        <button class="digit" id="5">5</button>
+        <button class="digit" id="6">6</button>
+        <button class="multiply operate" id="*">×</button>
+        <button class="digit" id="1">1</button>
+        <button class="digit" id="2">2</button>
+        <button class="digit" id="3">3</button>
+        <button class="subtract operate" id="-">-</button>
+        <button class="digit" id='.'>.</button>
+        <button class="digit" id="0">0</button>
+        <button class="equal">=</button>
+        <button class="add operate" id="+">+</button>
+    </div>
+    <footer class="footer">
+        <p>
+          Copyright © senahaddadr
+        </p>
+      </footer>
 </body>
+
 </html>
