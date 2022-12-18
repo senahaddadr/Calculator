@@ -22,7 +22,7 @@ digits.forEach(key =>
 );
 
 operators.forEach(operator => 
-    operator.addEventListener('click', () => isPair= 'True')
+    operator.addEventListener('click', () => isPair= 'true')
 )
 
 operators.forEach(operator => 
@@ -70,9 +70,8 @@ function operate(operation, a, b) {
         space.textContent = Math.round(space.textContent*100)/100
         temp.textContent = `${a} ${operation} ${b} =` ;
         localStorage.clear();
-        console.log([operation, b])
         if (operation == '/' && b == 0) {
-            space.textContent = 'ERROR ERROR ERROR'
+            space.textContent = 'ERROR'
             temp.textContent = ''
             isReset='true'
         }
@@ -123,10 +122,10 @@ function remember(op) {
     } else {
         localStorage.setItem('firstNum', space.textContent)
     }
-    operands = 0;
     localStorage.setItem('operation', op.id)
     temp.textContent = space.textContent + ' ' + op.id
     isReset = 'true';
+    operands = 0;
 }
 
 
