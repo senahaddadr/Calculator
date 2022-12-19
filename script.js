@@ -8,13 +8,14 @@ let isReset = 'false';
 let isPair = 'false';
 let click = 0;
 let operands = 0;
+let dot = 0;
 
 window.onbeforeunload = function() {
         localStorage.clear();
 };
 
 keys.forEach(key =>
-    key.addEventListener('click', () => display(key), {once : false})
+    key.addEventListener('click', () => display(key))
 );
 
 digits.forEach(key =>
@@ -57,7 +58,8 @@ function end() {
 }
 
 function operate(operation, a, b) {
-    if (operands === 1) {
+    dot = 0;
+        if (operands === 1) {
         if (operation === '+') {
             space.textContent = add(a,b)
         } else if (operation === '-') {
@@ -107,12 +109,15 @@ function display(btn) {
         if (space.textContent == 0) {
             space.textContent = ""
         }
-        if (btn.className === 'point') {
-            btn.addEventListener('click', () => display(btn), {once:true})
+        if (btn.id === '.') {
+            if (dot === 1) {
+                return
+            }
+            dot = 1
         }
         space.textContent += btn.id;
         isReset = 'false'
-    }
+        }
 }
 
 function remember(op) {
