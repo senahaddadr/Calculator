@@ -59,7 +59,8 @@ function end() {
 
 function operate(operation, a, b) {
     dot = 0;
-        if (operands === 1) {
+    console.log(operands)
+    if (operands === 1 && isPair==='true') {
         if (operation === '+') {
             space.textContent = add(a,b)
         } else if (operation === '-') {
